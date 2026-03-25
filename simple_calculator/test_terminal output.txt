@@ -1,0 +1,197 @@
+venv) tana-tech@DESKTOP-6AJM7TR:~/TANATECH PROJECT/tana vue/simple_calculator$ pip install pytest
+python -m pytest calculator_testor.py -v
+Collecting pytest
+  Downloading pytest-9.0.2-py3-none-any.whl.metadata (7.6 kB)
+Collecting iniconfig>=1.0.1 (from pytest)
+  Downloading iniconfig-2.3.0-py3-none-any.whl.metadata (2.5 kB)
+Collecting packaging>=22 (from pytest)
+  Using cached packaging-26.0-py3-none-any.whl.metadata (3.3 kB)
+Collecting pluggy<2,>=1.5 (from pytest)
+  Downloading pluggy-1.6.0-py3-none-any.whl.metadata (4.8 kB)
+Collecting pygments>=2.7.2 (from pytest)
+  Using cached pygments-2.19.2-py3-none-any.whl.metadata (2.5 kB)
+Downloading pytest-9.0.2-py3-none-any.whl (374 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 374.8/374.8 kB 526.5 kB/s eta 0:00:00
+Downloading iniconfig-2.3.0-py3-none-any.whl (7.5 kB)
+Downloading packaging-26.0-py3-none-any.whl (74 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 74.4/74.4 kB 1.0 MB/s eta 0:00:00
+Downloading pluggy-1.6.0-py3-none-any.whl (20 kB)
+Using cached pygments-2.19.2-py3-none-any.whl (1.2 MB)
+Installing collected packages: pygments, pluggy, packaging, iniconfig, pytest
+Successfully installed iniconfig-2.3.0 packaging-26.0 pluggy-1.6.0 pygments-2.19.2 pytest-9.0.2
+=========================================================== test session starts ============================================================
+platform linux -- Python 3.12.3, pytest-9.0.2, pluggy-1.6.0 -- /home/tana-tech/TANATECH PROJECT/tana vue/venv/bin/python
+cachedir: .pytest_cache
+rootdir: /home/tana-tech/TANATECH PROJECT/tana vue/simple_calculator
+collected 0 items / 1 error                                                                                                                
+
+================================================================== ERRORS ==================================================================
+___________________________________________________ ERROR collecting calculator_testor.py ____________________________________________________
+ImportError while importing test module '/home/tana-tech/TANATECH PROJECT/tana vue/simple_calculator/calculator_testor.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+/usr/lib/python3.12/importlib/__init__.py:90: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+calculator_testor.py:4: in <module>
+    from calculator import add, subtract, multiply, divide
+E   ModuleNotFoundError: No module named 'calculator'
+========================================================= short test summary info ==========================================================
+ERROR calculator_testor.py
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! Interrupted: 1 error during collection !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+============================================================= 1 error in 0.43s =============================================================
+(venv) tana-tech@DESKTOP-6AJM7TR:~/TANATECH PROJECT/tana vue/simple_calculator$ pytest -v
+=========================================================== test session starts ============================================================
+platform linux -- Python 3.12.3, pytest-9.0.2, pluggy-1.6.0 -- /home/tana-tech/TANATECH PROJECT/tana vue/venv/bin/python3
+cachedir: .pytest_cache
+rootdir: /home/tana-tech/TANATECH PROJECT/tana vue/simple_calculator
+collected 22 items                                                                                                                         
+
+calculator_testor.py::TestAdd::test_add_two_positive_numbers PASSED                                                                    [  4%]
+calculator_testor.py::TestAdd::test_add_positive_and_negative PASSED                                                                   [  9%]
+calculator_testor.py::TestAdd::test_add_two_negatives PASSED                                                                           [ 13%]
+calculator_testor.py::TestAdd::test_add_with_zero PASSED                                                                               [ 18%]
+calculator_testor.py::TestAdd::test_add_floats PASSED                                                                                  [ 22%]
+calculator_testor.py::TestSubtract::test_subtract_basic PASSED                                                                         [ 27%]
+calculator_testor.py::TestSubtract::test_subtract_gives_negative PASSED                                                                [ 31%]
+calculator_testor.py::TestSubtract::test_subtract_same_numbers PASSED                                                                  [ 36%]
+calculator_testor.py::TestSubtract::test_subtract_negative PASSED                                                                      [ 40%]
+calculator_testor.py::TestSubtract::test_subtract_floats PASSED                                                                        [ 45%]
+calculator_testor.py::TestMultiply::test_multiply_two_positives PASSED                                                                 [ 50%]
+calculator_testor.py::TestMultiply::test_multiply_by_zero PASSED                                                                       [ 54%]
+calculator_testor.py::TestMultiply::test_multiply_negatives PASSED                                                                     [ 59%]
+calculator_testor.py::TestMultiply::test_multiply_mixed_signs PASSED                                                                   [ 63%]
+calculator_testor.py::TestMultiply::test_multiply_floats PASSED                                                                        [ 68%]
+calculator_testor.py::TestDivide::test_divide_basic PASSED                                                                             [ 72%]
+calculator_testor.py::TestDivide::test_divide_returns_float PASSED                                                                     [ 77%]
+calculator_testor.py::TestDivide::test_divide_negative_dividend PASSED                                                                 [ 81%]
+calculator_testor.py::TestDivide::test_divide_negative_divisor PASSED                                                                  [ 86%]
+calculator_testor.py::TestDivide::test_divide_floats PASSED                                                                            [ 90%]
+calculator_testor.py::TestDivide::test_divide_by_zero_raises PASSED                                                                    [ 95%]
+calculator_testor.py::TestDivide::test_divide_zero_by_number PASSED                                                                    [100%]
+
+============================================================ 22 passed in 0.28s ============================================================
+(venv) tana-tech@DESKTOP-6AJM7TR:~/TANATECH PROJECT/tana vue/simple_calculator$ pytest -v
+=========================================================== test session starts ============================================================
+platform linux -- Python 3.12.3, pytest-9.0.2, pluggy-1.6.0 -- /home/tana-tech/TANATECH PROJECT/tana vue/venv/bin/python3
+cachedir: .pytest_cache
+rootdir: /home/tana-tech/TANATECH PROJECT/tana vue/simple_calculator
+collected 0 items / 1 error                                                                                                                
+
+================================================================== ERRORS ==================================================================
+___________________________________________________ ERROR collecting calculator_testor.py ____________________________________________________
+calculator_testor.py:3: in <module>
+    calculator = Calculator()
+                 ^^^^^^^^^^^^
+E   TypeError: Calculator.__init__() missing 2 required positional arguments: 'a' and 'b'
+========================================================= short test summary info ==========================================================
+ERROR calculator_testor.py - TypeError: Calculator.__init__() missing 2 required positional arguments: 'a' and 'b'
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! Interrupted: 1 error during collection !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+============================================================= 1 error in 0.51s =============================================================
+(venv) tana-tech@DESKTOP-6AJM7TR:~/TANATECH PROJECT/tana vue/simple_calculator$ pytest -v
+=========================================================== test session starts ============================================================
+platform linux -- Python 3.12.3, pytest-9.0.2, pluggy-1.6.0 -- /home/tana-tech/TANATECH PROJECT/tana vue/venv/bin/python3
+cachedir: .pytest_cache
+rootdir: /home/tana-tech/TANATECH PROJECT/tana vue/simple_calculator
+collected 0 items / 1 error                                                                                                                
+
+================================================================== ERRORS ==================================================================
+___________________________________________________ ERROR collecting calculator_testor.py ____________________________________________________
+calculator_testor.py:3: in <module>
+    calculator = Calculator(a, b)
+                            ^
+E   NameError: name 'a' is not defined
+========================================================= short test summary info ==========================================================
+ERROR calculator_testor.py - NameError: name 'a' is not defined
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! Interrupted: 1 error during collection !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+============================================================= 1 error in 0.50s =============================================================
+(venv) tana-tech@DESKTOP-6AJM7TR:~/TANATECH PROJECT/tana vue/simple_calculator$ pytest -v
+=========================================================== test session starts ============================================================
+platform linux -- Python 3.12.3, pytest-9.0.2, pluggy-1.6.0 -- /home/tana-tech/TANATECH PROJECT/tana vue/venv/bin/python3
+cachedir: .pytest_cache
+rootdir: /home/tana-tech/TANATECH PROJECT/tana vue/simple_calculator
+collected 22 items                                                                                                                         
+
+calculator_testor.py::TestAdd::test_add_two_positive_numbers PASSED                                                                    [  4%]
+calculator_testor.py::TestAdd::test_add_positive_and_negative PASSED                                                                   [  9%]
+calculator_testor.py::TestAdd::test_add_two_negatives PASSED                                                                           [ 13%]
+calculator_testor.py::TestAdd::test_add_with_zero PASSED                                                                               [ 18%]
+calculator_testor.py::TestAdd::test_add_floats PASSED                                                                                  [ 22%]
+calculator_testor.py::TestSubtract::test_subtract_basic PASSED                                                                         [ 27%]
+calculator_testor.py::TestSubtract::test_subtract_gives_negative PASSED                                                                [ 31%]
+calculator_testor.py::TestSubtract::test_subtract_same_numbers PASSED                                                                  [ 36%]
+calculator_testor.py::TestSubtract::test_subtract_negative PASSED                                                                      [ 40%]
+calculator_testor.py::TestSubtract::test_subtract_floats PASSED                                                                        [ 45%]
+calculator_testor.py::TestMultiply::test_multiply_two_positives PASSED                                                                 [ 50%]
+calculator_testor.py::TestMultiply::test_multiply_by_zero PASSED                                                                       [ 54%]
+calculator_testor.py::TestMultiply::test_multiply_negatives PASSED                                                                     [ 59%]
+calculator_testor.py::TestMultiply::test_multiply_mixed_signs PASSED                                                                   [ 63%]
+calculator_testor.py::TestMultiply::test_multiply_floats PASSED                                                                        [ 68%]
+calculator_testor.py::TestDivide::test_divide_basic PASSED                                                                             [ 72%]
+calculator_testor.py::TestDivide::test_divide_returns_float PASSED                                                                     [ 77%]
+calculator_testor.py::TestDivide::test_divide_negative_dividend PASSED                                                                 [ 81%]
+calculator_testor.py::TestDivide::test_divide_negative_divisor PASSED                                                                  [ 86%]
+calculator_testor.py::TestDivide::test_divide_floats PASSED                                                                            [ 90%]
+calculator_testor.py::TestDivide::test_divide_by_zero_raises PASSED                                                                    [ 95%]
+calculator_testor.py::TestDivide::test_divide_zero_by_number PASSED                                                                    [100%]
+
+============================================================ 22 passed in 0.72s ============================================================
+(venv) tana-tech@DESKTOP-6AJM7TR:~/TANATECH PROJECT/tana vue/simple_calculator$ 
+
+(venv) tana-tech@DESKTOP-6AJM7TR:~/TANATECH PROJECT/tana vue/simple_calculator$ pytest -v
+============================= test session starts ==============================
+platform linux -- Python 3.12.3, pytest-9.0.2, pluggy-1.6.0 -- /home/tana-tech/TANATECH PROJECT/tana vue/venv/bin/python3
+cachedir: .pytest_cache
+rootdir: /home/tana-tech/TANATECH PROJECT/tana vue/simple_calculator
+collected 5 items                                                              
+
+test_calculator.py::test_add_two_positive_numbers PASSED                 [ 20%]
+test_calculator.py::test_subtract_larger_from_smaller PASSED             [ 40%]
+test_calculator.py::test_multiply_by_zero PASSED                         [ 60%]
+test_calculator.py::test_divide_by_zero_raises_value_error PASSED        [ 80%]
+test_calculator.py::test_add_floats_precision PASSED                     [100%]
+
+============================== 5 passed in 0.34s ===============================
+(venv) tana-tech@DESKTOP-6AJM7TR:~/TANATECH PROJECT/tana vue/simple_calculator$ mv calculator_testor.py test_calculator_testor.py
+(venv) tana-tech@DESKTOP-6AJM7TR:~/TANATECH PROJECT/tana vue/simple_calculator$ pytest -v
+============================= test session starts ==============================
+platform linux -- Python 3.12.3, pytest-9.0.2, pluggy-1.6.0 -- /home/tana-tech/TANATECH PROJECT/tana vue/venv/bin/python3
+cachedir: .pytest_cache
+rootdir: /home/tana-tech/TANATECH PROJECT/tana vue/simple_calculator
+collected 32 items                                                             
+
+test_calculator.py::test_add_two_positive_numbers PASSED                 [  3%]
+test_calculator.py::test_subtract_larger_from_smaller PASSED             [  6%]
+test_calculator.py::test_multiply_by_zero PASSED                         [  9%]
+test_calculator.py::test_divide_by_zero_raises_value_error PASSED        [ 12%]
+test_calculator.py::test_add_floats_precision PASSED                     [ 15%]
+test_calculator_testor.py::TestAdd::test_add_two_positive_numbers PASSED [ 18%]
+test_calculator_testor.py::TestAdd::test_add_positive_and_negative PASSED [ 21%]
+test_calculator_testor.py::TestAdd::test_add_two_negatives PASSED        [ 25%]
+test_calculator_testor.py::TestAdd::test_add_with_zero PASSED            [ 28%]
+test_calculator_testor.py::TestAdd::test_add_floats PASSED               [ 31%]
+test_calculator_testor.py::TestSubtract::test_subtract_basic PASSED      [ 34%]
+test_calculator_testor.py::TestSubtract::test_subtract_gives_negative PASSED [ 37%]
+test_calculator_testor.py::TestSubtract::test_subtract_same_numbers PASSED [ 40%]
+test_calculator_testor.py::TestSubtract::test_subtract_negative PASSED   [ 43%]
+test_calculator_testor.py::TestSubtract::test_subtract_floats PASSED     [ 46%]
+test_calculator_testor.py::TestMultiply::test_multiply_two_positives PASSED [ 50%]
+test_calculator_testor.py::TestMultiply::test_multiply_by_zero PASSED    [ 53%]
+test_calculator_testor.py::TestMultiply::test_multiply_negatives PASSED  [ 56%]
+test_calculator_testor.py::TestMultiply::test_multiply_mixed_signs PASSED [ 59%]
+test_calculator_testor.py::TestMultiply::test_multiply_floats PASSED     [ 62%]
+test_calculator_testor.py::TestDivide::test_divide_basic PASSED          [ 65%]
+test_calculator_testor.py::TestDivide::test_divide_returns_float PASSED  [ 68%]
+test_calculator_testor.py::TestDivide::test_divide_negative_dividend PASSED [ 71%]
+test_calculator_testor.py::TestDivide::test_divide_negative_divisor PASSED [ 75%]
+test_calculator_testor.py::TestDivide::test_divide_floats PASSED         [ 78%]
+test_calculator_testor.py::TestDivide::test_divide_by_zero_raises PASSED [ 81%]
+test_calculator_testor.py::TestDivide::test_divide_zero_by_number PASSED [ 84%]
+test_calculator_testor.py::TestFetchValue::test_fetch_returns_float PASSED [ 87%]
+test_calculator_testor.py::TestFetchValue::test_fetch_value_used_in_add PASSED [ 90%]
+test_calculator_testor.py::TestFetchValue::test_fetch_value_used_in_divide PASSED [ 93%]
+test_calculator_testor.py::TestFetchValue::test_fetch_raises_on_bad_payload PASSED [ 96%]
+test_calculator_testor.py::TestFetchValue::test_network_is_never_called_for_pure_functions PASSED [100%]
+
+============================== 32 passed in 0.83s ==============================
+(venv) tana-tech@DESKTOP-6AJM7TR:~/TANATECH PROJECT/tana vue/simple_calculator$
