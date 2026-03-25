@@ -3,3 +3,6 @@
 /library-ui/node_modules
 library-backend/books.json
 /venv
+/simple_calculator/__pycache__
+
+*.pytest_cache
