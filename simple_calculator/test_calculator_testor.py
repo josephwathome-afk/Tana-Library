@@ -1,9 +1,3 @@
-"""
-TDD Phase 1 — RED: Write tests before any implementation exists.
-Run with: python -m pytest test_calculator.py -v
-All tests should FAIL until calculator.py is implemented.
-"""
-
 import pytest
 from unittest.mock import patch, MagicMock
 from calculator import add, subtract, multiply, divide, fetch_value
